@@ -1,24 +1,4 @@
 <h1 class="text-center">Listing all Articles</h1>
-<% @articles.each_with_index do |article, i| %>
-  <div class="row justify-content-md-center">
-    <div class="col-8">
-      <div class="card text-center mt-5 shadow p-3 mb-5 bg-white rounded">
-        <div class="card-header">
-          <p>Author: <%= article.user.username %> </p>
-        </div>
-        <div class="card-body">
-          <h5 class="card-title"><%= article.title %></h5>
-          <p class="card-text"><%= article.description %></p>
-          <%= link_to 'Show', article, class: "btn btn-outline-primary" %>
-          <%= link_to 'Edit', edit_article_path(article), class: "btn btn-outline-primary" %>
-          <%= link_to 'Destroy', article, class: "btn btn-outline-primary", method: :delete, data: { confirm: 'Are you sure?' } %>
-        </div>
-        <div class="card-footer text-muted mt-3">
-          <p>Article Number: <%= 1 + i %></p>
-        </div>
-      </div>
-    </div>
-  </div>
-<% end %>
+<%= render 'article' %>
 
 

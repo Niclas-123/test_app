@@ -1,0 +1,11 @@
+<div class="container text-center">
+    <h1><%= @user.username %></h1>
+
+    <%= gravatar_for @user, size: 200 %>
+    <br>
+    <h3>Articles</h3>
+
+    <%= render 'articles/article' %>
+
+    <%= link_to 'Back', articles_path, class: "btn btn-outline-primary" %>
+</div>
